@@ -5,43 +5,44 @@
 #include <stdbool.h> // so that bool, true, and false can be used
 // #include <omp.h>
 
-#define BUCKETNUM 10; // 0-9 it's constant while BUCKETSIZE is vary 
+// 0-9 it's constant while BUCKETSIZE is vary 
+// 0-999 it's constant while BUCKETNUM is vary
 
 void fill_ran(int array[], int length,int min,int max);
 
 
 int* bucket_sort(int length){
-
-
+    int BUCKETNUM = 10; 
+    int BUCKETSIZE =1000; 
     int* array = (int*)malloc(length * sizeof(int));
-
+    int a[BUCKETSIZE], b[BUCKETSIZE], c[BUCKETSIZE], d[BUCKETSIZE], e[BUCKETSIZE], f[BUCKETSIZE], g[BUCKETSIZE], h[BUCKETSIZE], i[BUCKETSIZE], j[BUCKETSIZE];   
     fill_ran(array,length,0,99999); // fill the array with random numbers
+    for(int i=0;i<BUCKETNUM;i++){
 
-
-    for(int i=0;i<length;i++){
-        printf("a[%d] = %d\n",i,array[i]);
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+    // for(int i=0;i<length;i++){
+    //     printf("a[%d] = %d\n",i,array[i]);
+    // }
 
 
     return array;
 }
 
 int main(void){
-    // srand(time(NULL) * getpid() ); // seed random number generator for
-    // int size = 0;
-    // printf("Here's the size of the array that can be generated");
-    // printf("We support 10000, 100000, 500000, 1000000, 2000000 \n");
-    // // int a[size];
-    // int* a = (int*)malloc(size * sizeof(int)); 
-    // if (a == NULL) {
-    //     printf("Memory allocation failed\n");
-    //     return 1;
-    // }
-    // fill_ran(a,size,0,99999);
-    // for(int i=0; i<size;i++){
-    //     printf("a[%d] = %d\n",i,a[i]);
-    // }    
+
 
     printf("Hello World\n");
     printf("-------------------\n");
@@ -68,8 +69,6 @@ int main(void){
     printf("-------------------\n");
     printf("-------------------\n");
 
-
-    
 }
 
 
@@ -86,22 +85,3 @@ void fill_ran(int array[], int length,int min,int max)
 
 
 
-
-
-// void printRandoms(int min, int max, int count) {
-//     printf("Random numbers between %d and %d: ", min, max);
-//     // Loop that will print the count random numbers
-//     for (int i = 0; i < count; i++) {
-
-//         // Find the random number in the range [min, max]
-//         int rd_num = rand() % (max - min + 1) + min;
-
-//         printf("%d ", rd_num);
-//     }
-// }
-
-// int main() {
-//     int min = 0, max = 99999, count = 100000;
-//     printRandoms(min, max, count);
-//     return 0;
-// }
