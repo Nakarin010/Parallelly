@@ -12,41 +12,119 @@ void fill_ran(int array[], int length,int min,int max);
 
 
 int* bucket_sort(int length){
+    int BUCKETSIZE = 2000000;
     int BUCKETNUM = 10; 
-    int BUCKETSIZE =1000; 
     int* array = (int*)malloc(length * sizeof(int));
-    int a[BUCKETSIZE], b[BUCKETSIZE], c[BUCKETSIZE], d[BUCKETSIZE], e[BUCKETSIZE], f[BUCKETSIZE], g[BUCKETSIZE], h[BUCKETSIZE], i[BUCKETSIZE], j[BUCKETSIZE];   
+    int a[BUCKETSIZE], b[BUCKETSIZE], c[BUCKETSIZE], d[BUCKETSIZE], e[BUCKETSIZE], f[BUCKETSIZE], g[BUCKETSIZE], h[BUCKETSIZE], k[BUCKETSIZE], y[BUCKETSIZE];   
     fill_ran(array,length,0,99999); // fill the array with random numbers
 
-    for(int i=0;i<BUCKETNUM;i++){
-        if( i==0){
-            for(int j=0;j<BUCKETSIZE;j++){
-                if(array[j] >= i*BUCKETSIZE && array[j] < (i+1)*BUCKETSIZE){
-                    a[j] = array[j];
-                }
-            }
+    for (int i = 0; i < sizeof(a); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 0 && array[j] < 999)
+        {
+            a[i] = array[j];
         }
+        
+    } 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // for(int i=0;i<length;i++){
-    //     printf("a[%d] = %d\n",i,array[i]);
-    // }
+    for (int i = 0; i < sizeof(b); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 1000 && array[j] < 1999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(c); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 2000 && array[j] < 2999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(d); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 3000 && array[j] < 3999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(e); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 4000 && array[j] < 4999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(f); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 5000 && array[j] < 5999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(g); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 6000 && array[j] < 6999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(h); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 7000 && array[j] < 7999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(k); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 8000 && array[j] < 8999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    for (int i = 0; i < sizeof(y); i++)
+    {for (int j = 0; j < sizeof(array); j++)
+    {
+        if(array[j] >= 9000 && array[j] < 9999)
+        {
+            b[i] = array[j];
+        }
+        
+    } 
+    }
+    
+    
 
 
     return array;
 }
+
 
 int main(void){
 
