@@ -8,22 +8,68 @@
 #define BUCKETNUM 10; // 0-9 it's constant while BUCKETSIZE is vary 
 
 void fill_ran(int array[], int length,int min,int max);
-void bucket_sort(int array[], int length)
-int main(void){
-    srand(time(NULL) * getpid() ); // seed random number generator for
-    int size = 0;
-    printf("Here's the size of the array that can be generated");
-    printf("We support 10000, 100000, 500000, 1000000, 2000000 \n");
-    // int a[size];
-    int* a = (int*)malloc(size * sizeof(int)); 
-    if (a == NULL) {
-        printf("Memory allocation failed\n");
-        return 1;
+
+
+int* bucket_sort(int length){
+
+
+    int* array = (int*)malloc(length * sizeof(int));
+
+    fill_ran(array,length,0,99999); // fill the array with random numbers
+
+
+    for(int i=0;i<length;i++){
+        printf("a[%d] = %d\n",i,array[i]);
     }
-    fill_ran(a,size,0,99999);
-    for(int i=0; i<size;i++){
-        printf("a[%d] = %d\n",i,a[i]);
-    }    
+
+
+
+    return array;
+}
+
+int main(void){
+    // srand(time(NULL) * getpid() ); // seed random number generator for
+    // int size = 0;
+    // printf("Here's the size of the array that can be generated");
+    // printf("We support 10000, 100000, 500000, 1000000, 2000000 \n");
+    // // int a[size];
+    // int* a = (int*)malloc(size * sizeof(int)); 
+    // if (a == NULL) {
+    //     printf("Memory allocation failed\n");
+    //     return 1;
+    // }
+    // fill_ran(a,size,0,99999);
+    // for(int i=0; i<size;i++){
+    //     printf("a[%d] = %d\n",i,a[i]);
+    // }    
+
+    printf("Hello World\n");
+    printf("-------------------\n");
+    printf("-------------------\n");
+    printf("10000\n");
+    bucket_sort(10000);
+    printf("-------------------\n");
+    printf("-------------------\n");
+    printf("100000\n");
+
+    printf("-------------------\n");
+    printf("-------------------\n");
+
+
+    printf("500000\n");
+    printf("-------------------\n");
+    printf("-------------------\n");
+
+    printf("1000000\n");
+    printf("-------------------\n");
+    printf("-------------------\n");  
+
+    printf("2000000\n");
+    printf("-------------------\n");
+    printf("-------------------\n");
+
+
+    
 }
 
 
@@ -35,14 +81,6 @@ void fill_ran(int array[], int length,int min,int max)
         array[i] = (rand() % (max - min +1)) + min;  
     }
 }
-
-
-
-
-
-
-
-
 
 
 
