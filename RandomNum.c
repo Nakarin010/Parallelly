@@ -17,8 +17,15 @@ int* bucket_sort(int length){
     int* array = (int*)malloc(length * sizeof(int));
     int a[BUCKETSIZE], b[BUCKETSIZE], c[BUCKETSIZE], d[BUCKETSIZE], e[BUCKETSIZE], f[BUCKETSIZE], g[BUCKETSIZE], h[BUCKETSIZE], i[BUCKETSIZE], j[BUCKETSIZE];   
     fill_ran(array,length,0,99999); // fill the array with random numbers
-    for(int i=0;i<BUCKETNUM;i++){
 
+    for(int i=0;i<BUCKETNUM;i++){
+        if( i==0){
+            for(int j=0;j<BUCKETSIZE;j++){
+                if(array[j] >= i*BUCKETSIZE && array[j] < (i+1)*BUCKETSIZE){
+                    a[j] = array[j];
+                }
+            }
+        }
     }
 
 
