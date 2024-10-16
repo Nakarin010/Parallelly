@@ -8,7 +8,7 @@
 #define BUCKETNUM 10; // 0-9 it's constant while BUCKETSIZE is vary 
 
 void fill_ran(int array[], int length,int min,int max);
-
+void bucket_sort(int array[], int length)
 int main(void){
     srand(time(NULL) * getpid() ); // seed random number generator for
     int size = 0;
